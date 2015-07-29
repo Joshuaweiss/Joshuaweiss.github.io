@@ -1,0 +1,99 @@
+// out: ../css/main.css
+///rgb(226, 58, 6)
+$background_color: #eeeeee;
+$bar_color: rgba(#000000, 0.57);
+$hover_bar_color: rgba(#ffca54, 0.75);
+
+html, body, header, ul, li, section, figure {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  background-color: $background_color;
+  min-height: 2000px;
+}
+
+.group::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+header {
+  @extend .group;
+  background-color: $bar_color;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  z-index: 1000;
+
+  nav {
+    margin: auto;
+    width: 85%;
+
+    & #logo {
+      padding-top: 14px;
+      padding-bottom: 20px;
+      font-weight: 100;
+      font-size: 30px;
+    }
+
+    & .logo-buttons {
+      float: left;
+    }
+
+    & .nav-buttons {
+      float: right;
+    }
+
+    & li{
+      float: left;
+      padding: 20px 20px 26px 20px;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: $hover_bar_color;
+      }
+    }
+  }
+
+}
+
+
+#Main {
+  height: 600px;
+  background-image: url("../images/main_image.jpg");
+  background-size: cover;
+  position: relative;
+  color: white;
+
+  & .personal-picture {
+    background-image: url("../images/personal_picture.jpg");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 170px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50, 0);
+  }
+
+  & h1 {
+    position: absolute;
+    bottom: 40;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50, 0);
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+}
