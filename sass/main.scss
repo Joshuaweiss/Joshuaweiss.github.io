@@ -1,22 +1,41 @@
 // out: ../css/main.css
 ///rgb(226, 58, 6)
-$background_color: #eeeeee;
+$background_color: #000000;
 $bar_color: rgba(#000000, 0.57);
-$hover_bar_color: rgba(#ffca54, 0.75);
+$hover_bar_color: rgba(#a8a8a8, 0.57);
 
-html, body, header, ul, li, section, figure {
+html, body, header, ul, li, section, figure{
   margin: 0;
   border: 0;
   padding: 0;
   font-family: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   background-color: $background_color;
+  color: rgb(255, 255, 255);
   min-height: 2000px;
+
+  figure.backdrop {
+    background-image: url("../images/main_image.jpg");
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1000;
+  }
+
 }
+
 
 .group::after {
   clear: both;
@@ -27,22 +46,23 @@ body {
 header {
   @extend .group;
   background-color: $bar_color;
-  height: 70px;
   position: fixed;
   width: 100%;
   font-size: 20px;
-  color: rgb(255, 255, 255);
   z-index: 1000;
 
   nav {
+    @extend .group;
     margin: auto;
     width: 85%;
 
     & #logo {
-      padding-top: 14px;
-      padding-bottom: 20px;
-      font-weight: 100;
-      font-size: 30px;
+      & a {
+        padding-top: 14px;
+        padding-bottom: 20px;
+        font-weight: 100;
+        font-size: 30px;
+      }
     }
 
     & .logo-buttons {
@@ -55,23 +75,51 @@ header {
 
     & li{
       float: left;
-      padding: 20px 20px 26px 20px;
-      transition: background-color 0.2s;
-      &:hover {
-        background-color: $hover_bar_color;
+      & a {
+        display: block;
+        padding: 20px 20px 26px 20px;
+        transition: background-color 0.2s;
+        &:hover {
+          background-color: $hover_bar_color;
+        }
       }
     }
   }
 
 }
 
+section{
+  padding: 100px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  & h1, h5 {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    font-weight: 100;
+    z-index: 300;
+    margin: auto;
+    text-align: center;
+  }
+
+  & h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    bottom: 40px;
+  }
+
+  & h5 {
+    font-size: 15px;
+    bottom: 30px;
+  }
+
+
+}
+
 
 #Main {
   height: 600px;
-  background-image: url("../images/main_image.jpg");
-  background-size: cover;
   position: relative;
-  color: white;
+  background-color: transparent;
+  padding: 0;
 
   & .personal-picture {
     background-image: url("../images/personal_picture.jpg");
@@ -86,14 +134,73 @@ header {
     -webkit-transform: translate(-50, 0);
   }
 
-  & h1 {
+  & h1, h5 {
     position: absolute;
-    bottom: 40;
     left: 50%;
     transform: translate(-50%, 0);
     -webkit-transform: translate(-50, 0);
-    font-size: 40px;
-    font-weight: 300;
   }
 
+  & h1 {
+    font-size: 55px;
+    bottom: 40px;
+  }
+
+  & h5 {
+    font-size: 20px;
+    bottom: 30px;
+  }
+
+  & .bar {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+}
+
+
+#AboutMe {
+
+  & h1 {
+    font-size: 40px;
+  }
+
+  & h5 {
+    font-size: 15px;
+  }
+
+
+  & p {
+    font-size: 20px;
+    display: block;
+    max-width: 700px;
+    padding: 0 10px;
+    margin: auto;
+  }
+}
+
+#Skills {
+
+  ul.skill-list {
+    @extend .group;
+    max-width: 640px;
+    margin: auto;
+    li {
+      background-color: black;
+      height: 120px;
+      width: 120px;
+      margin: 20px;
+      float: left;
+    }
+  }
+
+}
+
+#ContactMe {
+  
 }
