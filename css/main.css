@@ -16,7 +16,8 @@ body {
   font-weight: 300;
   background-color: #000000;
   color: white;
-  min-height: 2000px; }
+  min-height: 2000px;
+  -webkit-font-smoothing: subpixel-antialiased; }
   body figure.backdrop {
     background-image: url("../images/main_image.jpg");
     background-size: cover;

@@ -26,6 +26,7 @@ body {
   background-color: $background_color;
   color: rgb(255, 255, 255);
   min-height: 2000px;
+  -webkit-font-smoothing: subpixel-antialiased;
 
   figure.backdrop {
     background-image: url("../images/main_image.jpg");
