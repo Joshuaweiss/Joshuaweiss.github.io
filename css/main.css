@@ -177,6 +177,8 @@ body > section {
         left: 0;
         right: 0;
         background-color: rgba(0, 0, 0, 0.4); }
+      #Projects ul.project-list li figure:active {
+        top: 2px; }
     #Projects ul.project-list li section.project-info {
       padding: 20px;
       width: 260px;

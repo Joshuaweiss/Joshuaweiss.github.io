@@ -256,6 +256,10 @@ body > section{
           right: 0;
           background-color: $picture_black_hover;
         }
+
+        &:active {
+          top: 2px;
+        }
       }
       section.project-info{
         padding: 20px;
