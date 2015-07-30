@@ -198,6 +198,7 @@ body > section{
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      position: relative;
       height: 120px;
       width: 120px;
       margin: 20px;
@@ -205,6 +206,18 @@ body > section{
       box-sizing: border-box;
       background-color: rgba(255, 255, 255, 0.7);
       border: 10px solid transparent;;
+    }
+    li::after {
+      display: block;
+      position: absolute;
+      content: attr(data-label);
+      width: 300px;
+      text-align: center;
+      left: 50%;
+      bottom: -45%;
+      font-weight: 100;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
     }
   }
 
@@ -222,7 +235,7 @@ body > section{
         width: 300px;
         height: 200px;
         float: left;
-        background-color: black;
+        background-size: cover;
         margin: 20px 0 20px 20px;
       }
       section.project-info{
@@ -233,7 +246,9 @@ body > section{
 
         h2 {
           margin: 0;
-          margin-bottom: 15px;
+          margin-bottom: 6px;
+          position: relative;
+          top: -4px;
           font-weight: 300;
         }
       }
@@ -244,7 +259,28 @@ body > section{
 }
 
 #ContactMe {
-
+  ul.contact-list {
+    @extend .group;
+    margin: auto;
+    width: 530px;
+    li {
+      margin: auto;
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      float: left;
+      margin: 10px;
+      position: relative;
+      a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
 }
 
 
@@ -298,4 +334,30 @@ body > section{
 
 .c-plus-plus-logo {
   background-image: url("../images/CPlusPlus_logo.png");
+}
+
+
+.quiz-czar-snapshot {
+  background-image: url("../images/QuizCzar1.png");
+}
+
+.linked-in-logo {
+  background-image: url("../images/In-2CRev-128px-TM.png");
+}
+
+.git-hub-logo {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  border: 8px solid transparent;
+  border-radius: 10px;
+  background-image: url("../images/Octocat.png");
+}
+
+.email-logo {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  border: 40px solid transparent;
+  background-position: center;
+  border-radius: 10px;
+  background-image: url("../images/email_logo.svg");
 }
