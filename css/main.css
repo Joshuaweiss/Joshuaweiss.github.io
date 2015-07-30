@@ -34,7 +34,7 @@ body {
   display: block; }
 
 header {
-  background-color: rgba(0, 0, 0, 0.57);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100%;
   font-size: 20px;
@@ -156,7 +156,7 @@ body > section {
 #Projects ul.project-list {
   max-width: 640px;
   margin: auto;
-  color: #3c3c3c; }
+  color: #404040; }
   #Projects ul.project-list li {
     margin-bottom: 30px;
     background-color: rgba(255, 255, 255, 0.7); }
@@ -165,7 +165,18 @@ body > section {
       height: 200px;
       float: left;
       background-size: cover;
-      margin: 20px 0 20px 20px; }
+      margin: 20px 0 20px 20px;
+      position: relative; }
+      #Projects ul.project-list li figure:hover::after {
+        display: block;
+        position: absolute;
+        z-index: 900;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.4); }
     #Projects ul.project-list li section.project-info {
       padding: 20px;
       width: 260px;
@@ -177,6 +188,10 @@ body > section {
         position: relative;
         top: -4px;
         font-weight: 300; }
+        #Projects ul.project-list li section.project-info h2:hover {
+          color: #8e8e8e; }
+        #Projects ul.project-list li section.project-info h2:active {
+          top: -2px; }
 
 #ContactMe ul.contact-list {
   margin: auto;
@@ -189,13 +204,20 @@ body > section {
     background-repeat: no-repeat;
     float: left;
     margin: 10px;
-    position: relative; }
+    position: relative;
+    transition: box-shadow 0.4s, top 0.4s; }
     #ContactMe ul.contact-list li a {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0; }
+    #ContactMe ul.contact-list li:hover {
+      top: -2px;
+      transition: none;
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4); }
+    #ContactMe ul.contact-list li:active {
+      top: 4px; }
 
 .ruby-logo {
   background-image: url("../images/Ruby_logo.png"); }
@@ -237,17 +259,18 @@ body > section {
   background-image: url("../images/QuizCzar1.png"); }
 
 .linked-in-logo {
-  background-image: url("../images/In-2CRev-128px-TM.png"); }
+  background-image: url("../images/In-2CRev-128px-TM.png");
+  border-radius: 10px; }
 
 .git-hub-logo {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   box-sizing: border-box;
   border: 8px solid transparent;
   border-radius: 10px;
   background-image: url("../images/Octocat.png"); }
 
 .email-logo {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   box-sizing: border-box;
   border: 40px solid transparent;
   background-position: center;
