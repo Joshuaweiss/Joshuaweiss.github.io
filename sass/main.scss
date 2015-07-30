@@ -4,11 +4,15 @@ $background_color: #000000;
 $bar_color: rgba(#000000, 0.57);
 $hover_bar_color: rgba(#a8a8a8, 0.57);
 
-html, body, header, ul, li, section, figure{
+html, body, header, ul, li, section, figure, h1, h5, p{
   margin: 0;
   border: 0;
   padding: 0;
   font-family: inherit;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -56,8 +60,8 @@ header {
     margin: auto;
     width: 85%;
 
-    & #logo {
-      & a {
+    #logo {
+      a {
         padding-top: 14px;
         padding-bottom: 20px;
         font-weight: 100;
@@ -65,17 +69,17 @@ header {
       }
     }
 
-    & .logo-buttons {
+    .logo-buttons {
       float: left;
     }
 
-    & .nav-buttons {
+    .nav-buttons {
       float: right;
     }
 
-    & li{
+    li{
       float: left;
-      & a {
+      a {
         display: block;
         padding: 20px 20px 26px 20px;
         transition: background-color 0.2s;
@@ -88,11 +92,11 @@ header {
 
 }
 
-section{
+body > section{
   padding: 100px 0;
   background-color: rgba(0, 0, 0, 0.5);
 
-  & h1, h5 {
+  h1, h5 {
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
     font-weight: 100;
     z-index: 300;
@@ -100,13 +104,13 @@ section{
     text-align: center;
   }
 
-  & h1 {
+  h1 {
     font-size: 40px;
     margin-bottom: 30px;
     bottom: 40px;
   }
 
-  & h5 {
+  h5 {
     font-size: 15px;
     bottom: 30px;
   }
@@ -121,7 +125,7 @@ section{
   background-color: transparent;
   padding: 0;
 
-  & .personal-picture {
+  .personal-picture {
     background-image: url("../images/personal_picture.jpg");
     background-size: cover;
     width: 200px;
@@ -134,24 +138,24 @@ section{
     -webkit-transform: translate(-50, 0);
   }
 
-  & h1, h5 {
+  h1, h5 {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
     -webkit-transform: translate(-50, 0);
   }
 
-  & h1 {
+  h1 {
     font-size: 55px;
     bottom: 40px;
   }
 
-  & h5 {
+  h5 {
     font-size: 20px;
     bottom: 30px;
   }
 
-  & .bar {
+  .bar {
     display: block;
     position: absolute;
     bottom: 0;
@@ -166,16 +170,16 @@ section{
 
 #AboutMe {
 
-  & h1 {
+  h1 {
     font-size: 40px;
   }
 
-  & h5 {
+  h5 {
     font-size: 15px;
   }
 
 
-  & p {
+  p {
     font-size: 20px;
     display: block;
     max-width: 700px;
@@ -191,16 +195,107 @@ section{
     max-width: 640px;
     margin: auto;
     li {
-      background-color: black;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
       height: 120px;
       width: 120px;
       margin: 20px;
       float: left;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 10px solid transparent;;
     }
   }
 
 }
 
+#Projects {
+  ul.project-list {
+    max-width: 640px;
+    margin: auto;
+    color: rgb(60, 60, 60);
+    li {
+      @extend .group;
+      margin-bottom: 30px;
+      figure {
+        width: 300px;
+        height: 200px;
+        float: left;
+        background-color: black;
+        margin: 20px 0 20px 20px;
+      }
+      section.project-info{
+        padding: 20px;
+        width: 260px;
+        display: block;
+        float: left;
+
+        h2 {
+          margin: 0;
+          margin-bottom: 15px;
+          font-weight: 300;
+        }
+      }
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+  }
+}
+
 #ContactMe {
-  
+
+}
+
+
+
+
+
+
+.ruby-logo {
+  background-image: url("../images/Ruby_logo.png");
+}
+
+.rails-logo {
+  background-image: url("../images/rails_logo.svg");
+}
+
+.rspec-logo {
+  background-image: url("../images/rspec_logo.png");
+}
+
+.git-logo {
+  background-image: url("../images/git_logo.svg");
+}
+
+.jquery-logo {
+  background-image: url("../images/jquery_logo.svg");
+}
+
+.js-logo {
+  background-image: url("../images/js_logo.svg");
+}
+
+.html-logo {
+  background-image: url("../images/html5_logo.svg");
+}
+
+.backbone-logo {
+  background-image: url("../images/backbone_logo.png");
+}
+
+.css-logo {
+  background-image: url("../images/css3_logo.svg");
+}
+
+.postgresql-logo {
+  background-image: url("../images/postgresql_logo.svg");
+}
+
+.swift-logo {
+  background-image: url("../images/swift_logo.png");
+}
+
+.c-plus-plus-logo {
+  background-image: url("../images/CPlusPlus_logo.png");
 }

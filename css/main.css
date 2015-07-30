@@ -1,8 +1,11 @@
-html, body, header, ul, li, section, figure {
+html, body, header, ul, li, section, figure, h1, h5, p {
   margin: 0;
   border: 0;
   padding: 0;
   font-family: inherit; }
+
+ul {
+  list-style: none; }
 
 a {
   text-decoration: none;
@@ -24,7 +27,7 @@ body {
     position: fixed;
     z-index: -1000; }
 
-.group::after, header::after, header nav::after, #Skills ul.skill-list::after {
+.group::after, header::after, header nav::after, #Skills ul.skill-list::after, #Projects ul.project-list li::after {
   clear: both;
   content: "";
   display: block; }
@@ -56,20 +59,20 @@ header {
         header nav li a:hover {
           background-color: rgba(168, 168, 168, 0.57); }
 
-section {
+body > section {
   padding: 100px 0;
   background-color: rgba(0, 0, 0, 0.5); }
-  section h1, section h5 {
+  body > section h1, body > section h5 {
     text-shadow: 0px 0px 10px black;
     font-weight: 100;
     z-index: 300;
     margin: auto;
     text-align: center; }
-  section h1 {
+  body > section h1 {
     font-size: 40px;
     margin-bottom: 30px;
     bottom: 40px; }
-  section h5 {
+  body > section h5 {
     font-size: 15px;
     bottom: 30px; }
 
@@ -126,8 +129,72 @@ section {
   max-width: 640px;
   margin: auto; }
   #Skills ul.skill-list li {
-    background-color: black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 120px;
     width: 120px;
     margin: 20px;
-    float: left; }
+    float: left;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 10px solid transparent; }
+
+#Projects ul.project-list {
+  max-width: 640px;
+  margin: auto;
+  color: #3c3c3c; }
+  #Projects ul.project-list li {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.7); }
+    #Projects ul.project-list li figure {
+      width: 300px;
+      height: 200px;
+      float: left;
+      background-color: black;
+      margin: 20px 0 20px 20px; }
+    #Projects ul.project-list li section.project-info {
+      padding: 20px;
+      width: 260px;
+      display: block;
+      float: left; }
+      #Projects ul.project-list li section.project-info h2 {
+        margin: 0;
+        margin-bottom: 15px;
+        font-weight: 300; }
+
+.ruby-logo {
+  background-image: url("../images/Ruby_logo.png"); }
+
+.rails-logo {
+  background-image: url("../images/rails_logo.svg"); }
+
+.rspec-logo {
+  background-image: url("../images/rspec_logo.png"); }
+
+.git-logo {
+  background-image: url("../images/git_logo.svg"); }
+
+.jquery-logo {
+  background-image: url("../images/jquery_logo.svg"); }
+
+.js-logo {
+  background-image: url("../images/js_logo.svg"); }
+
+.html-logo {
+  background-image: url("../images/html5_logo.svg"); }
+
+.backbone-logo {
+  background-image: url("../images/backbone_logo.png"); }
+
+.css-logo {
+  background-image: url("../images/css3_logo.svg"); }
+
+.postgresql-logo {
+  background-image: url("../images/postgresql_logo.svg"); }
+
+.swift-logo {
+  background-image: url("../images/swift_logo.png"); }
+
+.c-plus-plus-logo {
+  background-image: url("../images/CPlusPlus_logo.png"); }
