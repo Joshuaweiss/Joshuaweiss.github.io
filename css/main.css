@@ -34,7 +34,7 @@ body {
   display: block; }
 
 header {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   width: 100%;
   font-size: 20px;
@@ -62,7 +62,7 @@ header {
 
 body > section {
   padding: 100px 0;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.6); }
   body > section h1, body > section h5 {
     text-shadow: 0px 0px 10px black;
     font-weight: 100;
@@ -80,10 +80,21 @@ body > section {
 #Main {
   height: 600px;
   position: relative;
-  background-color: transparent;
-  padding: 0; }
+  padding: 0;
+  background-color: transparent; }
+  #Main::after {
+    background-image: url("../images/main_image_clear.jpg");
+    background-size: cover;
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: -4;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 150px; }
   #Main .personal-picture {
-    background-image: url("../images/personal_picture.jpg");
+    background-image: url("../images/joshua-weiss.jpg");
     background-size: cover;
     width: 200px;
     height: 200px;
@@ -111,7 +122,7 @@ body > section {
     left: 0;
     right: 0;
     height: 150px;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.6); }
 
 #AboutMe h1 {
   font-size: 40px; }
