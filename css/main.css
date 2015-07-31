@@ -78,21 +78,19 @@ body > section {
     bottom: 30px; }
 
 #Main {
-  height: 600px;
+  height: 500px;
   position: relative;
   padding: 0;
-  background-color: transparent; }
-  #Main::after {
+  background-color: transparent;
+  padding-bottom: 200px;
+  background-color: rgba(0, 0, 0, 0.6); }
+  #Main figure.main-image {
     background-image: url("../images/main_image_clear.jpg");
     background-size: cover;
     display: block;
-    content: "";
-    position: absolute;
-    z-index: -4;
-    top: 70px;
-    left: 0;
-    right: 0;
-    bottom: 150px; }
+    position: relative;
+    margin: auto;
+    height: 440px; }
   #Main .personal-picture {
     background-image: url("../images/joshua-weiss.jpg");
     background-size: cover;
@@ -102,27 +100,17 @@ body > section {
     top: 170px;
     border-radius: 50%;
     left: 50%;
+    z-index: 1;
     transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0); }
   #Main h1, #Main h5 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0); }
+    margin: 30px auto; }
   #Main h1 {
     font-size: 55px;
     bottom: 40px; }
   #Main h5 {
     font-size: 20px;
     bottom: 30px; }
-  #Main .bar {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background-color: rgba(0, 0, 0, 0.6); }
 
 #AboutMe h1 {
   font-size: 40px; }

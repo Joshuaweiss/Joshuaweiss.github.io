@@ -126,22 +126,20 @@ body > section{
 
 
 #Main {
-  height: 600px;
+  height: 500px;
   position: relative;
   padding: 0;
   background-color: transparent;
+  padding-bottom: 200px;
+  background-color: $behind_section;
 
-  &::after {
+  figure.main-image {
     background-image: url("../images/main_image_clear.jpg");
     background-size: cover;
     display: block;
-    content: "";
-    position: absolute;
-    z-index: -4;
-    top: 70px;
-    left: 0;
-    right: 0;
-    bottom: 150px;
+    position: relative;
+    margin: auto;
+    height: 440px;
   }
 
   .personal-picture {
@@ -153,15 +151,13 @@ body > section{
     top: 170px;
     border-radius: 50%;
     left: 50%;
+    z-index: 1;
     transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
   }
 
   h1, h5 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
+    margin: 30px auto;
   }
 
   h1 {
@@ -174,15 +170,6 @@ body > section{
     bottom: 30px;
   }
 
-  .bar {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background-color: $behind_section;
-  }
 
 }
 
