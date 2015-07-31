@@ -99,7 +99,7 @@ header {
 }
 
 body > section{
-  padding: 100px 0;
+  padding: 50px 0;
   background-color: $behind_section;
 
   h1, h5 {
@@ -126,11 +126,11 @@ body > section{
 
 
 #Main {
-  height: 500px;
+  height: 350px;
   position: relative;
   padding: 0;
   background-color: transparent;
-  padding-bottom: 200px;
+  padding-bottom: 180px;
   background-color: $behind_section;
 
   figure.main-image {
@@ -157,7 +157,7 @@ body > section{
   }
 
   h1, h5 {
-    margin: 30px auto;
+    margin: 10px auto;
   }
 
   h1 {
@@ -234,9 +234,28 @@ body > section{
     max-width: 640px;
     margin: auto;
     color: $charcole_text;
+
+
     li {
       @extend .group;
       margin-bottom: 30px;
+      position: relative;
+
+      a.project-git-link {
+        position: absolute;
+        display: block;
+        top: 10px;
+        right: 20px;
+        font-weight: bold;
+        color: $charcole_text;
+        &:hover {
+          color: $charcole_text_hilight;
+        }
+        &:active {
+          top: 12px;
+        }
+      }
+
       figure {
         width: 300px;
         height: 200px;

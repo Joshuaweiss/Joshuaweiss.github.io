@@ -61,7 +61,7 @@ header {
           background-color: rgba(168, 168, 168, 0.57); }
 
 body > section {
-  padding: 100px 0;
+  padding: 50px 0;
   background-color: rgba(0, 0, 0, 0.6); }
   body > section h1, body > section h5 {
     text-shadow: 0px 0px 10px black;
@@ -78,11 +78,11 @@ body > section {
     bottom: 30px; }
 
 #Main {
-  height: 500px;
+  height: 350px;
   position: relative;
   padding: 0;
   background-color: transparent;
-  padding-bottom: 200px;
+  padding-bottom: 180px;
   background-color: rgba(0, 0, 0, 0.6); }
   #Main figure.main-image {
     background-image: url("../images/main_image_clear.jpg");
@@ -104,7 +104,7 @@ body > section {
     transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0); }
   #Main h1, #Main h5 {
-    margin: 30px auto; }
+    margin: 10px auto; }
   #Main h1 {
     font-size: 55px;
     bottom: 40px; }
@@ -158,7 +158,19 @@ body > section {
   color: #404040; }
   #Projects ul.project-list li {
     margin-bottom: 30px;
+    position: relative;
     background-color: rgba(255, 255, 255, 0.7); }
+    #Projects ul.project-list li a.project-git-link {
+      position: absolute;
+      display: block;
+      top: 10px;
+      right: 20px;
+      font-weight: bold;
+      color: #404040; }
+      #Projects ul.project-list li a.project-git-link:hover {
+        color: #8e8e8e; }
+      #Projects ul.project-list li a.project-git-link:active {
+        top: 12px; }
     #Projects ul.project-list li figure {
       width: 300px;
       height: 200px;
