@@ -208,6 +208,10 @@ body > section {
         #Projects ul.project-list li section.project-info h2:active {
           top: -2px; }
 
+#Resume iframe {
+  display: block;
+  margin: auto; }
+
 #ContactMe ul.contact-list {
   margin: auto;
   width: 530px; }

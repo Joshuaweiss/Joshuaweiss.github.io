@@ -309,6 +309,13 @@ body > section{
   }
 }
 
+#Resume {
+  iframe {
+    display: block;
+    margin: auto;
+  }
+}
+
 #ContactMe {
   ul.contact-list {
     @extend .group;
