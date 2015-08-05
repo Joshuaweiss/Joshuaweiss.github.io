@@ -33,6 +33,31 @@ body {
   content: "";
   display: block; }
 
+@media (max-width: 770px) {
+  .logo-buttons {
+    margin: auto !important;
+    float: none !important; }
+  #logo {
+    margin: auto !important;
+    float: none !important; }
+    #logo a {
+      margin: auto !important;
+      float: none !important;
+      padding: 8px !important;
+      font-size: 20px !important;
+      text-align: center; }
+  .nav-buttons {
+    float: none !important;
+    margin: auto !important;
+    width: 450px;
+    clear: both; }
+    .nav-buttons li a {
+      padding: 5px 20px 10px 20px !important; }
+  .nav-buttons::after {
+    clear: both;
+    content: "";
+    display: block; } }
+
 header {
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
@@ -142,17 +167,17 @@ body > section {
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.7);
     border: 10px solid transparent; }
-  #Skills ul.skill-list li::after {
-    display: block;
-    position: absolute;
-    content: attr(data-label);
-    width: 300px;
-    text-align: center;
-    left: 50%;
-    bottom: -45%;
-    font-weight: 100;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%); }
+    #Skills ul.skill-list li::after {
+      display: block;
+      position: absolute;
+      content: attr(data-label);
+      width: 300px;
+      text-align: center;
+      left: 50%;
+      bottom: -45%;
+      font-weight: 100;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%); }
 
 #Projects ul.project-list {
   max-width: 640px;
