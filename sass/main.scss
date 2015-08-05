@@ -55,7 +55,7 @@ body {
   display: block;
 }
 
-@media (max-width: 770px) {
+@media (max-device-width: 770px), (max-width: 770px) {
 
   .logo-buttons {
     margin: auto !important;
@@ -77,7 +77,7 @@ body {
   .nav-buttons {
     float: none !important;
     margin: auto !important;
-    width: 450px;
+    width: 455px;
     clear: both;
 
     li a {
