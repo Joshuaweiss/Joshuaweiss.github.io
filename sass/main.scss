@@ -1,4 +1,4 @@
-// out: ../css/main.css
+// compileCompressed, compressedFilenamePattern: ../css/$1.css
 ///rgb(226, 58, 6)
 $background_color: #000000;
 $bar_color: rgba(#000000, 0.57);
@@ -15,6 +15,7 @@ html, body, header, ul, li, section, figure, h1, h5, p{
   margin: 0;
   border: 0;
   padding: 0;
+  line-height: 1.5;
   font-family: inherit;
 }
 
@@ -25,6 +26,20 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.link {
+  color: rgb(87, 158, 232);
+  transition: color 0.5s;
+  position: relative;
+
+  &:hover {
+    color: rgb(0, 126, 255);
+  }
+
+  &:active {
+    top: 2px;
+  }
 }
 
 body {
@@ -412,8 +427,12 @@ body > section{
   background-image: url("../images/git_logo.svg");
 }
 
-.jquery-logo {
-  background-image: url("../images/jquery_logo.svg");
+.es6-logo {
+  background-image: url("../images/es6.svg");
+}
+
+.ts-logo {
+  background-image: url("../images/ts.svg");
 }
 
 .js-logo {
@@ -424,8 +443,8 @@ body > section{
   background-image: url("../images/html5_logo.svg");
 }
 
-.backbone-logo {
-  background-image: url("../images/backbone_logo.png");
+.angular-logo {
+  background-image: url("../images/angular-logo.svg");
 }
 
 .css-logo {
@@ -440,8 +459,8 @@ body > section{
   background-image: url("../images/swift_logo.png");
 }
 
-.c-plus-plus-logo {
-  background-image: url("../images/CPlusPlus_logo.png");
+.webpack-logo {
+  background-image: url("../images/webpack.svg");
 }
 
 
